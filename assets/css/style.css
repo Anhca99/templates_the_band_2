@@ -27,6 +27,8 @@ html{
 }
 
 #nav{
+    /* này do thằng nav nó chiếm hết thanh header nên do đo ta 
+    không float right thanh tìm kiếm lên trên đươc */
     display: inline-block;
 }
 
@@ -125,6 +127,7 @@ cách nhau dấu phẩy là oke
 }
 
 #slider{
+    /* để cho 2 dong chữ nổi lên trên hình ảnh ă */
     position: relative;
     margin-top: 46px;
     /* để cho hình ảnh không bị bể */
@@ -135,6 +138,7 @@ cách nhau dấu phẩy là oke
 }
 
 #slider .text-content{
+    /* để cho 2 dong chữ nổi lên trên hình ảnh ă */
     position: absolute;
     bottom: 47px;
     color: #fff;
@@ -203,6 +207,44 @@ cách nhau dấu phẩy là oke
 #content .section-sub-heading{
     /* Căn giữa 2 dòng chữ The Band và We love music */
     text-align: center;
+}
+
+#content .member-list{
+    /* khoảng cách khung to */
+    margin-top: 48px;
+    /* Có 2 cách khắc chế mỗi khi ta dùng float.
+    Cách 1: overflow: hidden; Dùng để ôm hết các thằng con của nó, 
+    Cách 2: html: <div class="clear"></div>, 
+            css: .clear{
+                        clear: both;
+                    } .*/
+}
+
+#content .member-item{
+    /* cho 3 hình thẳng hàng */
+    float: left;
+    /* 3 hình cộng lại thì = 100% 
+    giúp hình = mép với đoạn chữ ở trên */
+    width: 33.33333%;
+    /* cách 2 width: calc(100% / 3); */
+    /* căn giữa chữ và ảnh lun */
+    text-align: center;
+}
+
+#content .member-name{
+    font-size: 15px;
+}
+
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    /*  cắt góc hình ảnh cho tròn hơn */
+    border-radius: 4px;
+    
+}
+
+.clear{
+    clear: both;
 }
 
 #footer{
