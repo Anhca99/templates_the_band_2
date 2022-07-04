@@ -13,6 +13,10 @@ html{
 
 }
 
+.text-white{
+    color: #fff !important;
+}
+
 #header{
     height: 46px;
     background-color: #000;
@@ -34,7 +38,7 @@ html{
 
 #nav, .subnav{
     /* ẩn đi dấu chấm của ul li */
-    list-style-type: none;
+    list-style: none;
 }
 
 #nav > li{
@@ -164,6 +168,7 @@ cách nhau dấu phẩy là oke
 
 }
 
+/* About */
 #content .content-section{
     width: 800px;
     /* padding trên dưới = 64px trái phải = 0 */
@@ -245,6 +250,50 @@ cách nhau dấu phẩy là oke
 
 .clear{
     clear: both;
+}
+
+/* Tour section */
+#content .tour-section{
+    background-color: #000;
+}
+
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    /* khi html ul,li sẽ hiện dấu chấm nên none */
+    list-style: none;
+}
+
+.tickets-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    /* Dấu gạch ở dưới chân rất dài */
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out{
+    color: #fff;
+    background-color: #f44336;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    background-color: #000;
+    /* tạo hình tròn */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    /* Nó bị lệch phía dưới 
+    do ta padding mà ko dùng height
+    để dùng margin-top âm thì phải có float */
+    margin-top: -3px;
+    margin-right: 16px;
 }
 
 #footer{
