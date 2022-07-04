@@ -296,6 +296,71 @@ cách nhau dấu phẩy là oke
     margin-right: 16px;
 }
 
+/* content tour place */
+.places-list{
+    margin-top: 32px;
+    /* giúp căn lên hình ảnh bằng với tickets trên */
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 48px;
+}
+
+.place-item{
+    float: left;
+    /* cộng 3 ảnh lại = 100% */
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.place-img{
+    /* giúp ảnh đúng với kích cỡ vì to quá */
+    width: 100%;
+    /* Giúp kết nối khung place-body lại với hình ảnh */
+    display: block;
+}
+
+.place-img:hover{
+    /* giúp ảnh tối đi xíu */
+    opacity: 0.6;
+}
+
+.place-body{
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    /* chữ tiếng anh 1.4 tiếng việt 1.6 */
+    line-height: 1.4;
+}
+
+.place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    /* để nó nổi lên mà ko đè lên */
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
 #footer{
 
 }
