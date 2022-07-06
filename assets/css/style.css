@@ -9,12 +9,60 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#main{
-
-}
-
+/* Những class dùng chung */
 .text-white{
     color: #fff !important;
+}
+.clear{
+    clear: both;
+}
+
+/* tạo cái cột dùng chung cho(About, Tour, Contact) */
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* Ta sẽ tạo ra clear: both; giả, giúp code ngắn gọn hơn
+giúp ta ko cần phải code bên html 
+nguyên cái thẻ <div class="clear"></div> */
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-third{
+    width: 33.33333%;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+
+#main{
+
 }
 
 #header{
@@ -225,17 +273,6 @@ cách nhau dấu phẩy là oke
                     } .*/
 }
 
-#content .member-item{
-    /* cho 3 hình thẳng hàng */
-    float: left;
-    /* 3 hình cộng lại thì = 100% 
-    giúp hình = mép với đoạn chữ ở trên */
-    width: 33.33333%;
-    /* cách 2 width: calc(100% / 3); */
-    /* căn giữa chữ và ảnh lun */
-    text-align: center;
-}
-
 #content .member-name{
     font-size: 15px;
 }
@@ -248,9 +285,7 @@ cách nhau dấu phẩy là oke
     
 }
 
-.clear{
-    clear: both;
-}
+
 
 /* Tour section */
 #content .tour-section{
@@ -300,16 +335,7 @@ cách nhau dấu phẩy là oke
 .places-list{
     margin-top: 32px;
     /* giúp căn lên hình ảnh bằng với tickets trên */
-    margin-left: -8px;
-    margin-right: -8px;
     margin-bottom: 48px;
-}
-
-.place-item{
-    float: left;
-    /* cộng 3 ảnh lại = 100% */
-    width: 33.33333%;
-    padding: 0 8px;
 }
 
 .place-img{
@@ -379,6 +405,10 @@ cách nhau dấu phẩy là oke
     justify-content: center;
 }
 
+.open{
+    display: flex;
+}
+
 .modal-container{
     background-color: #fff;
     width: 900px;
@@ -390,9 +420,7 @@ cách nhau dấu phẩy là oke
     /* js buy tickets */
     animation: modalFadeIN ease 0.5s;
 }
-.open{
-    display: flex;
-}
+
 .modal-close{
     position: absolute;
     top: 0;
@@ -468,8 +496,7 @@ cách nhau dấu phẩy là oke
     color: #009688;
 }
 
-#footer{}
-
+/* css js buy tickets */
 @keyframes modalFadeIN {
     from {
         opacity: 0;
@@ -480,3 +507,46 @@ cách nhau dấu phẩy là oke
         transform: translateY(0);
     }
 }
+
+/* CONTACT */
+.contact-content{
+    margin-top: 48px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* css nâng cao, mục đích css vào (ti-) */
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn{
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: 12px 14px;
+    float: right;
+    cursor: pointer;
+}
+.contact-form .form-submit-btn:hover{
+    color: #000;
+    background-color: #ccc;
+    border: none;
+}
+
+#footer{}
+
