@@ -57,8 +57,13 @@ nguyên cái thẻ <div class="clear"></div> */
 .mt-8{
     margin-top: 8px !important;
 }
+
 .mt-16{
     margin-top: 16px !important;
+}
+
+.mb-48{
+    margin-bottom: 48px;
 }
 
 #main{
@@ -548,5 +553,37 @@ cách nhau dấu phẩy là oke
     border: none;
 }
 
-#footer{}
+/* hình cuối trang */
+.map-section img{
+    width: 100%;
+}
 
+/* Phần cuối trang */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+.socials-list{
+    font-size: 24px;
+}
+
+#footer .socials-list a{
+    color: #333;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover{
+    opacity: 0.6;
+}
+
+#footer .coppyright{
+    margin-top: 15px;
+    color: #333;
+    opacity: 0.8;
+}
+
+#footer .coppyright a{
+    color: #333;
+    opacity: 0.8;
+}
