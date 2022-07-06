@@ -359,8 +359,124 @@ cách nhau dấu phẩy là oke
 .place-buy-btn:hover{
     color: #000;
     background-color: #ccc;
+    border: none;
+    cursor: pointer;
 }
 
-#footer{
+/* css buy tickets */
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* giúp thằng con(modal-container) nằm giữa thằng modal  */
+    display: none;
+    /* giúp nằm giữa chiều cao */
+    align-items: center;
+    /* giúp nằm giữa chiều ngang */
+    justify-content: center;
+}
 
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    /* Giúp khi thu nhỏ thì cái khung cũng thu nhỏ theo
+    css này giúp ta tạo ra một khoảng cách */
+    max-width: calc(100% - 32px);
+    /* js buy tickets */
+    animation: modalFadeIN ease 0.5s;
+}
+.open{
+    display: flex;
+}
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+.modal-header{
+    background-color: #009688;
+    height: 130px;
+    /* 3 dòng css dưới dùng căn giữa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon{
+    margin-right: 16px;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-label{
+    /* hiển thị khối đẩy mấy kia xuống */
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input{
+    /* này nó giúp khung mờ đi */
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets{
+    background-color: #009688;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover{
+    /* tạo cảm giác đã click vào */
+    opacity: 0.8;
+}
+
+.modal-footer{
+    padding: 16px;
+    /* khi dùng cho nguyên thẻ thì float
+    khi dùng chữ thì dùng text-align */
+    text-align: right;
+}
+
+.modal-footer a{
+    color: #009688;
+}
+
+#footer{}
+
+@keyframes modalFadeIN {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
